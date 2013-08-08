@@ -28,15 +28,9 @@ load_rbfiles('config')
 
 module PhoneCat
 
-  # DB = Ground.db
-  # DB.loggers << Ground.logger
-
   App = Ground 'phone-cat' do
     use Rack::ShowExceptions
-    use Rack::Static, :urls => [""], root: 'app', index: 'index.html'
-    use Rack::Session::Cookie, {
-      secret: 'abc123'
-    }
+    use Rack::Static, :urls => [""], root: 'client/app', index: 'index.html'
   end
 
 end
