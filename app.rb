@@ -30,7 +30,7 @@ module PhoneCat
 
   App = Ground 'phone-cat' do
     use Rack::ShowExceptions
-    use Rack::Static, :urls => [""], root: 'client/app', index: 'index.html'
+    use Rack::Static, :urls => [""], root: 'app', index: 'index.html'
   end
 
 end
